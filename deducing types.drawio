@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-18T16:07:33.305Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.47" etag="vVuYIfLRW79D9cnPXuG3" version="18.0.7" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-18T16:35:38.427Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.47" etag="5LlHvJQg8BSxSbB9JG7J" version="18.0.7" type="github">
   <diagram id="OPUGuVJKlIoPCt-xv4Op" name="Page-1">
     <mxGraphModel dx="3076" dy="1931" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -367,7 +367,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-3" value="智能指针" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-690" y="2040" width="120" height="60" as="geometry" />
+          <mxGeometry x="-770" y="2030" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="XzLQBKeTJrF8Z5Bt5rwe-5" target="XzLQBKeTJrF8Z5Bt5rwe-8">
           <mxGeometry relative="1" as="geometry" />
@@ -402,7 +402,7 @@
         <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-14" value="导致" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="-213" y="1570" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-15" value="无法保证在所有的路径下都被且只被销毁一次（尤其是在有异常的情况下）" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-15" value="无法保证一定被销毁一次（尤其是在有异常控制流的情况下，如break,exception,return）" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-437.5" y="1740" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-17" value="人为判定正确" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
@@ -426,26 +426,41 @@
         <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-25" value="缺点" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="-560" y="1580" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="XzLQBKeTJrF8Z5Bt5rwe-26" target="XzLQBKeTJrF8Z5Bt5rwe-27">
+        <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="XzLQBKeTJrF8Z5Bt5rwe-26" target="XzLQBKeTJrF8Z5Bt5rwe-27">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-26" value="auto_ptr" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-470" y="1880" width="120" height="60" as="geometry" />
+          <mxGeometry x="-380" y="1880" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-27" value="unique_ptr" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-470" y="2000" width="120" height="60" as="geometry" />
+          <mxGeometry x="-380" y="2000" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-28" value="shared_ptr" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-470" y="2110" width="120" height="60" as="geometry" />
+          <mxGeometry x="-380" y="2110" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-29" value="weak_ptr" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-470" y="2230" width="120" height="60" as="geometry" />
+          <mxGeometry x="-380" y="2230" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-36" value="优于" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="-327.5" y="1960" width="40" height="20" as="geometry" />
+          <mxGeometry x="-317.5" y="1960" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-37" value="独占(exclusive ownership)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-227.5" y="1990" width="120" height="60" as="geometry" />
+        <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="XzLQBKeTJrF8Z5Bt5rwe-27" target="XzLQBKeTJrF8Z5Bt5rwe-44">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-50" y="2030" as="sourcePoint" />
+            <mxPoint x="-210" y="2030" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-44" value="使用定制的deleter会导致unique_ptr占的空间大于裸指针" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-147.5" y="2000" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-46" value="&lt;span style=&quot;&quot;&gt;exclusive ownership&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-510" y="2010" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-47" value="是move only的,move操作将源unique_ptr置为空" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-40" y="1870" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-48" value="可定制deleter" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-245" y="2010" width="90" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
