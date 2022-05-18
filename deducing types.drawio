@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-18T16:44:35.908Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.47" etag="texcGQdK0GySBlv11VCS" version="18.0.7" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-18T16:47:57.099Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.47" etag="irD2kvTHQURhJnvEVcon" version="18.0.7" type="github">
   <diagram id="OPUGuVJKlIoPCt-xv4Op" name="Page-1">
     <mxGraphModel dx="3076" dy="1931" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -426,6 +426,9 @@
         <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-26" value="auto_ptr" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-380" y="1880" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="XzLQBKeTJrF8Z5Bt5rwe-27" target="XzLQBKeTJrF8Z5Bt5rwe-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-27" value="unique_ptr" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-380" y="2000" width="120" height="60" as="geometry" />
         </mxCell>
@@ -451,7 +454,7 @@
           <mxGeometry x="-510" y="2010" width="120" height="20" as="geometry" />
         </mxCell>
         <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-47" value="是move only的,move操作将源unique_ptr置为空" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-370" y="2060" width="120" height="80" as="geometry" />
+          <mxGeometry x="-490" y="2060" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-48" value="可定制deleter" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="-245" y="2010" width="90" height="20" as="geometry" />
@@ -479,6 +482,12 @@
         </mxCell>
         <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-56" value="可能很大" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="167" y="1990" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-57" value="pimpl idiom" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="2120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-59" value="可隐式转化为" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-322.5" y="2140" width="90" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
