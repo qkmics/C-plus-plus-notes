@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-18T14:34:29.733Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.47" etag="edvGtpAEBAdfpJQjbCcE" version="18.0.7" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-18T14:43:13.001Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.47" etag="LkOtN-F5P2BHTZiI4R1Q" version="18.0.7" type="github">
   <diagram id="OPUGuVJKlIoPCt-xv4Op" name="Page-1">
     <mxGraphModel dx="3076" dy="1931" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -350,6 +350,60 @@
         </mxCell>
         <mxCell id="yQ8UnmBoRICfsAfrpyem-27" value="&lt;span style=&quot;&quot;&gt;类型是右值引用的左值&lt;/span&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-460" y="15" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-2" value="裸指针" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-630" y="1520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-3" value="智能指针" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-630" y="1680" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="XzLQBKeTJrF8Z5Bt5rwe-5" target="XzLQBKeTJrF8Z5Bt5rwe-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-5" value="声明无法看出指向的是对象还是对象数组" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-277.5" y="1470" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="XzLQBKeTJrF8Z5Bt5rwe-6" target="XzLQBKeTJrF8Z5Bt5rwe-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-6" value="声明无法反映它指向对象的生命周期，不知道是否应该销毁对象" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-437.5" y="1380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="XzLQBKeTJrF8Z5Bt5rwe-7" target="XzLQBKeTJrF8Z5Bt5rwe-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-7" value="没法直接看出怎样销毁指向的内存，是使用delete还是其他定制的销毁函数" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-437.5" y="1500" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="XzLQBKeTJrF8Z5Bt5rwe-8" target="XzLQBKeTJrF8Z5Bt5rwe-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-8" value="无法直接判断使用delete还是使用delete[]" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-437.5" y="1620" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-10" value="人为判定正确" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-470" y="1460" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-12" value="判断使用delete" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-480" y="1580" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-14" value="导致" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-213" y="1570" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-15" value="无法保证在所有的路径下都被且只被销毁一次（尤其是在有异常的情况下）" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-437.5" y="1740" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-17" value="人为判定正确" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-470" y="1700" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="XzLQBKeTJrF8Z5Bt5rwe-20" target="XzLQBKeTJrF8Z5Bt5rwe-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-20" value="没办法判断指针是否垂悬" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-230" y="1740" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-22" value="影响" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-293" y="1744" width="40" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
