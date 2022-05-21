@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-21T14:43:11.026Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53" etag="7JPYvlMyYkfIPbqpOimV" version="18.1.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-21T15:06:42.183Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53" etag="y4wddoZMpXIGjhLwecW4" version="18.1.1" type="github">
   <diagram id="OPUGuVJKlIoPCt-xv4Op" name="c++">
     <mxGraphModel dx="3076" dy="1931" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -595,11 +595,17 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="D_7xWSGTbG8qMXm1kdTH-23" value="保证控制块有且只有一个" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="380" y="2520" width="120" height="60" as="geometry" />
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-23" target="D_7xWSGTbG8qMXm1kdTH-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-23" target="D_7xWSGTbG8qMXm1kdTH-50">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-23" value="如何保证控制块只被创建一次" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="2520" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-25" value="引入问题" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="274.25" y="2530" width="60" height="20" as="geometry" />
+          <mxGeometry x="309.38" y="2530" width="60" height="20" as="geometry" />
         </mxCell>
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-27" value="shared_ptr2" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
           <mxGeometry x="-230" y="2460" width="140" height="90" as="geometry" />
@@ -627,6 +633,42 @@
         </mxCell>
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-33" value="实例" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="-280" y="2400" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-37" value="make_shared一定创建控制块" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="2550" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-38" target="D_7xWSGTbG8qMXm1kdTH-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-38" target="D_7xWSGTbG8qMXm1kdTH-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-38" target="D_7xWSGTbG8qMXm1kdTH-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-38" value="c++控制块创建规则" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="2620" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1.016;exitY=0.05;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-2" target="D_7xWSGTbG8qMXm1kdTH-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-40" value="make_shared创建一个新对象" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="780" y="2540" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-42" value="从独占的智能指针创建shared_ptr" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="2620" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-45" value="从裸指针创建shared_ptr" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="2700" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-47" value="c++只能这样做，因为只有从shared_ptr创建shared_ptr才知道控制块在哪个位置" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="2780" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-48" value="不要从裸指针创建shared_ptr" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="2450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-50" value="尽可能用make_shared创建shared_ptr" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="2365" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
