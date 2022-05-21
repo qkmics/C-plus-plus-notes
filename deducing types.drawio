@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-21T15:06:42.183Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53" etag="y4wddoZMpXIGjhLwecW4" version="18.1.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-21T15:17:18.727Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53" etag="jtQ5rrsP-R72ShPJNLmf" version="18.1.1" type="github">
   <diagram id="OPUGuVJKlIoPCt-xv4Op" name="c++">
     <mxGraphModel dx="3076" dy="1931" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -468,7 +468,7 @@
           <mxGeometry x="-510" y="2010" width="120" height="20" as="geometry" />
         </mxCell>
         <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-47" value="是move only的,move操作将源unique_ptr置为空" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-490" y="2060" width="120" height="80" as="geometry" />
+          <mxGeometry x="-457.5" y="2070" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-48" value="可定制deleter" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-245" y="2010" width="90" height="20" as="geometry" />
@@ -516,7 +516,7 @@
           <mxGeometry x="-667.5" y="2560" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="B7_kebNxeHdtV8KWOShU-9" value="两倍于裸指针的内存占用" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-130" y="2680" width="120" height="80" as="geometry" />
+          <mxGeometry x="-173" y="2670" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="B7_kebNxeHdtV8KWOShU-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="B7_kebNxeHdtV8KWOShU-14" target="B7_kebNxeHdtV8KWOShU-17" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -661,14 +661,23 @@
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-45" value="从裸指针创建shared_ptr" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="650" y="2700" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="D_7xWSGTbG8qMXm1kdTH-47" value="c++只能这样做，因为只有从shared_ptr创建shared_ptr才知道控制块在哪个位置" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-47" value="因为没办法知道旧控制块的地址" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="650" y="2780" width="120" height="80" as="geometry" />
         </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-48" target="D_7xWSGTbG8qMXm1kdTH-52">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-48" value="不要从裸指针创建shared_ptr" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="570" y="2450" width="120" height="60" as="geometry" />
+          <mxGeometry x="570" y="2425" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-50" value="尽可能用make_shared创建shared_ptr" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="570" y="2365" width="120" height="60" as="geometry" />
+          <mxGeometry x="570" y="2350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-52" value="make_shared不支持定制化deleter，使用new的结果作为创建shared_ptr的参数" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="790" y="2425" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-54" value="例外" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="710" y="2430" width="40" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
