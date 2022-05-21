@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-21T10:02:17.345Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53" etag="BtQDJcG_ee3FcraWiSM3" version="18.1.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-21T12:57:43.820Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53" etag="GEwvwFkzV13iVwov1llA" version="18.1.1" type="github">
   <diagram id="OPUGuVJKlIoPCt-xv4Op" name="c++">
     <mxGraphModel dx="3432" dy="2122" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -495,13 +495,13 @@
           <mxGeometry x="-307.5" y="2150" width="160" height="20" as="geometry" />
         </mxCell>
         <mxCell id="psaeY1RlJAv9MAsHN04e-1" value="垃圾回收" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-315" y="2980" width="120" height="60" as="geometry" />
+          <mxGeometry x="-283" y="2980" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="psaeY1RlJAv9MAsHN04e-2" value="析构函数" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-310" y="3190" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="psaeY1RlJAv9MAsHN04e-3" value="自动化" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-317.5" y="2890" width="120" height="80" as="geometry" />
+          <mxGeometry x="-285.5" y="2890" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="psaeY1RlJAv9MAsHN04e-4" value="对所有资源都有效，发生时间可控" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-310" y="3100" width="120" height="80" as="geometry" />
@@ -515,7 +515,7 @@
         <mxCell id="B7_kebNxeHdtV8KWOShU-5" value="指向对象的指针" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-130" y="2440" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="B7_kebNxeHdtV8KWOShU-6" value="&lt;span style=&quot;&quot;&gt;指向引用计数的指针&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+        <mxCell id="B7_kebNxeHdtV8KWOShU-6" value="&lt;span style=&quot;&quot;&gt;指向控制块的指针&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="-130" y="2520" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="B7_kebNxeHdtV8KWOShU-9" value="两倍于裸指针的内存占用" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -534,7 +534,7 @@
           <mxGeometry x="122.5" y="2240" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="B7_kebNxeHdtV8KWOShU-18" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;gradientColor=none;shadow=0;labelBackgroundColor=none;fillColor=none;strokeColor=#FF0800;" vertex="1" parent="1">
-          <mxGeometry x="-140" y="2420" width="140" height="170" as="geometry" />
+          <mxGeometry x="-140" y="2430" width="140" height="170" as="geometry" />
         </mxCell>
         <mxCell id="B7_kebNxeHdtV8KWOShU-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="B7_kebNxeHdtV8KWOShU-17" target="B7_kebNxeHdtV8KWOShU-17">
           <mxGeometry relative="1" as="geometry" />
@@ -553,6 +553,9 @@
         </mxCell>
         <mxCell id="B7_kebNxeHdtV8KWOShU-27" value="对结构的影响" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="20" y="2250" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="B7_kebNxeHdtV8KWOShU-31" value="T对象" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="84.25" y="2400" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
