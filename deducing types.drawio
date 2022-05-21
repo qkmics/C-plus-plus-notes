@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-21T15:33:53.527Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53" etag="pYKUemkyBzS4DtbzzbZ6" version="18.1.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-21T19:09:49.606Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53" etag="I84aP5ci5JKwHgpx9Pbc" version="18.1.1" type="github">
   <diagram id="OPUGuVJKlIoPCt-xv4Op" name="c++">
     <mxGraphModel dx="3076" dy="1931" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -676,6 +676,11 @@
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-48" value="不要从裸指针创建shared_ptr" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="570" y="2425" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-90" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-50" target="D_7xWSGTbG8qMXm1kdTH-92">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="770" y="2250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-50" value="尽可能用make_shared创建shared_ptr" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="570" y="2350" width="120" height="60" as="geometry" />
         </mxCell>
@@ -685,14 +690,20 @@
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-54" value="例外" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="710" y="2430" width="40" height="20" as="geometry" />
         </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-79" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-55" target="D_7xWSGTbG8qMXm1kdTH-77">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-55" value="不参与拥有所指向的对象" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-27.5" y="2713" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-59" target="D_7xWSGTbG8qMXm1kdTH-77">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-59" value="可以检测出自己是否垂悬" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-27.5" y="2803" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-60" value="提供：检测是否垂悬，若否，则access对象的原子操作" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-27.5" y="2893" width="120" height="60" as="geometry" />
+          <mxGeometry x="-27.5" y="2980" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-64" target="D_7xWSGTbG8qMXm1kdTH-59">
           <mxGeometry relative="1" as="geometry" />
@@ -709,17 +720,62 @@
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-69" target="D_7xWSGTbG8qMXm1kdTH-71">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-69" target="D_7xWSGTbG8qMXm1kdTH-75">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-89" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-69" target="D_7xWSGTbG8qMXm1kdTH-88">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-69" value="使用案例" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-200" y="3030" width="120" height="60" as="geometry" />
+          <mxGeometry x="-203" y="3147" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-71" value="cache创建过的对象" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-10" y="2990" width="120" height="60" as="geometry" />
+          <mxGeometry x="-30.5" y="3147" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-73" value="expired()" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="110" y="2793" width="120" height="80" as="geometry" />
+          <mxGeometry x="-27.5" y="2863" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-74" value="lock()" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="110" y="2883" width="120" height="80" as="geometry" />
+          <mxGeometry x="-30.5" y="3040" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-82" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-75" target="D_7xWSGTbG8qMXm1kdTH-81">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-75" target="D_7xWSGTbG8qMXm1kdTH-83">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-86" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-75" target="D_7xWSGTbG8qMXm1kdTH-84">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-75" value="观察者模式" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-20" y="3264" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-77" value="不影响对象的生命周期，但是能知道对象是否还存在" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="294" y="2713" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-81" value="被观察者在状态变化时要通知观察者，所以要存储观察者指针" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="3264" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-83" value="观察者对被观察者的状态变化感兴趣" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="3177" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-84" value="被观察者对观察者是否存在感兴趣，但是对生命周期不感兴趣，适用weak_ptr" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="3367" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-87" value="和shared_ptr的存储占用完全相同" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-387.5" y="2863" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-88" value="存在循环引用的数据结构中" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-20" y="3410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-91" value="原因" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="710" y="2350" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-92" value="std::shared_ptr&amp;lt;Type&amp;gt; spw(new Type)有两步操作" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="827" y="2250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-93" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="2170" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
