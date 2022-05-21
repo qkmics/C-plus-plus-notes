@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-05-19T15:34:49.956Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.47" etag="B0it6NiTd2t6CcqS_aVs" version="18.0.7" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-21T09:05:12.345Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53" etag="Y1UXJxG6boZwHHAyFikY" version="18.1.1" type="github">
   <diagram id="OPUGuVJKlIoPCt-xv4Op" name="Page-1">
-    <mxGraphModel dx="3076" dy="1931" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3432" dy="2122" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -432,6 +432,9 @@
         <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-27" value="unique_ptr" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-380" y="2000" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="B7_kebNxeHdtV8KWOShU-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="XzLQBKeTJrF8Z5Bt5rwe-28" target="B7_kebNxeHdtV8KWOShU-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-28" value="shared_ptr" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-380" y="2240" width="120" height="60" as="geometry" />
         </mxCell>
@@ -489,17 +492,26 @@
         <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-59" value="可（很方便地）隐式转化为" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-307.5" y="2150" width="160" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="psaeY1RlJAv9MAsHN04e-1" value="垃圾回收" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="psaeY1RlJAv9MAsHN04e-1" value="垃圾回收" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-152.5" y="2490" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="psaeY1RlJAv9MAsHN04e-2" value="析构函数" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="psaeY1RlJAv9MAsHN04e-2" value="析构函数" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-147.5" y="2700" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="psaeY1RlJAv9MAsHN04e-3" value="自动化" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="psaeY1RlJAv9MAsHN04e-3" value="自动化" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-155" y="2400" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="psaeY1RlJAv9MAsHN04e-4" value="对所有资源都有效，发生时间可控" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="psaeY1RlJAv9MAsHN04e-4" value="对所有资源都有效，发生时间可控" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-147.5" y="2610" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="B7_kebNxeHdtV8KWOShU-1" value="pimpl" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="-667.5" y="2560" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="B7_kebNxeHdtV8KWOShU-2" value="两倍于裸指针的内存占用" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-40" y="2240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="B7_kebNxeHdtV8KWOShU-4" value="存储指向引用计数的指针" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-220" y="2250" width="150" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
