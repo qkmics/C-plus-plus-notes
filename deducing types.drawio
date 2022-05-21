@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-21T09:28:00.742Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53" etag="3a2MlfoIXe-cgtMuMnzA" version="18.1.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-21T09:34:08.321Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53" etag="bG4RJS5BG6hxjgzxpW3x" version="18.1.1" type="github">
   <diagram id="OPUGuVJKlIoPCt-xv4Op" name="Page-1">
     <mxGraphModel dx="3432" dy="2122" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -432,7 +432,7 @@
         <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-27" value="unique_ptr" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-380" y="2000" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="B7_kebNxeHdtV8KWOShU-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="XzLQBKeTJrF8Z5Bt5rwe-28" target="B7_kebNxeHdtV8KWOShU-5">
+        <mxCell id="B7_kebNxeHdtV8KWOShU-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="XzLQBKeTJrF8Z5Bt5rwe-28" target="B7_kebNxeHdtV8KWOShU-18">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-40" y="2270" as="targetPoint" />
           </mxGeometry>
@@ -510,22 +510,31 @@
           <mxGeometry x="-667.5" y="2560" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="B7_kebNxeHdtV8KWOShU-4" value="结构" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="-190" y="2450" width="40" height="20" as="geometry" />
+          <mxGeometry x="-190" y="2520" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="B7_kebNxeHdtV8KWOShU-5" value="指向对象的指针" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-135.5" y="2450" width="120" height="60" as="geometry" />
+          <mxGeometry x="-130" y="2440" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="B7_kebNxeHdtV8KWOShU-6" value="&lt;span style=&quot;&quot;&gt;指向引用计数的指针&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="-135.5" y="2510" width="120" height="60" as="geometry" />
+          <mxGeometry x="-130" y="2520" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="B7_kebNxeHdtV8KWOShU-9" value="两倍于裸指针的内存占用" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-130" y="2580" width="120" height="80" as="geometry" />
+          <mxGeometry x="-130" y="2680" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="B7_kebNxeHdtV8KWOShU-14" value="定制的deleter不是shared_ptr的类型的一部分" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-110" y="2240" width="120" height="60" as="geometry" />
+          <mxGeometry x="-100" y="2240" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="B7_kebNxeHdtV8KWOShU-15" value="可定制deleter" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="-197.5" y="2270" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="B7_kebNxeHdtV8KWOShU-17" value="定制的deleter不增加share_ptr的大小" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-102.75" y="2310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="B7_kebNxeHdtV8KWOShU-18" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;gradientColor=none;shadow=0;labelBackgroundColor=none;fillColor=none;strokeColor=#FF0800;" vertex="1" parent="1">
+          <mxGeometry x="-140" y="2420" width="140" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="B7_kebNxeHdtV8KWOShU-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="B7_kebNxeHdtV8KWOShU-17" target="B7_kebNxeHdtV8KWOShU-17">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
