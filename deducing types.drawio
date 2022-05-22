@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-22T14:04:00.482Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53" etag="cB6O2agsX5k5g7UNmOhD" version="18.1.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-22T16:15:37.794Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53" etag="TBBySaKQyXSeIlS-7aEZ" version="18.1.1" type="github">
   <diagram id="OPUGuVJKlIoPCt-xv4Op" name="c++">
     <mxGraphModel dx="2891" dy="1832" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -960,7 +960,7 @@
           <mxGeometry x="-880" y="3660" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-171" value="用reserve预留足够的空间避免重新分配内存" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-340" y="3660" width="120" height="60" as="geometry" />
+          <mxGeometry x="-50" y="3690" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-178" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-172" target="D_7xWSGTbG8qMXm1kdTH-173">
           <mxGeometry relative="1" as="geometry" />
@@ -988,6 +988,69 @@
         </mxCell>
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-177" value="4.释放旧内存" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-537.5" y="3940" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-183" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-395.26" y="3740" as="sourcePoint" />
+            <mxPoint x="-312.63" y="3740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-184" value="开销比较大" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-301.25" y="3660" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-186" value="原来指向容器元素的迭代器、指针、引用都会失效" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-301.25" y="3750" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-188" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-150" y="3730" as="sourcePoint" />
+            <mxPoint x="-67.36999999999989" y="3730" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-189" value="缺点" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-380" y="3710" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-190" value="解决方式" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-150" y="3700" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-194" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-191" target="D_7xWSGTbG8qMXm1kdTH-192">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-191" value="内存分配器（allocator）" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-713" y="4080" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-192" value="惯例" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-500" y="4080" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-202" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-195" target="D_7xWSGTbG8qMXm1kdTH-196">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-203" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-195" target="D_7xWSGTbG8qMXm1kdTH-197">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-204" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-195" target="D_7xWSGTbG8qMXm1kdTH-198">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-205" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-195" target="D_7xWSGTbG8qMXm1kdTH-199">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-195" value="STL" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-780" y="4370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-196" value="STL使用技巧" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-550" y="4230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-197" value="迭代器" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-550" y="4330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-198" value="算法" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-550" y="4430" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-199" value="函数对象" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-550" y="4530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-206" value="包括" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-660" y="4380" width="40" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
