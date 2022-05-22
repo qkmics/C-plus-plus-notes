@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-05-21T19:09:49.606Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53" etag="I84aP5ci5JKwHgpx9Pbc" version="18.1.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-22T02:56:55.544Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53" etag="W8o5VV29kUV5z2ZMRfVq" version="18.1.1" type="github">
   <diagram id="OPUGuVJKlIoPCt-xv4Op" name="c++">
-    <mxGraphModel dx="3076" dy="1931" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3685" dy="2258" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -455,6 +455,15 @@
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="XzLQBKeTJrF8Z5Bt5rwe-29" target="D_7xWSGTbG8qMXm1kdTH-69">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-111" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="XzLQBKeTJrF8Z5Bt5rwe-29">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="60" y="2540" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-230" y="2833" />
+              <mxPoint x="-230" y="2595" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
         <mxCell id="XzLQBKeTJrF8Z5Bt5rwe-29" value="weak_ptr" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-380" y="2803" width="120" height="60" as="geometry" />
         </mxCell>
@@ -601,11 +610,15 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="D_7xWSGTbG8qMXm1kdTH-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-23" target="D_7xWSGTbG8qMXm1kdTH-48">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="D_7xWSGTbG8qMXm1kdTH-48">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="2550" as="sourcePoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-23" target="D_7xWSGTbG8qMXm1kdTH-50">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="540" y="2430" as="sourcePoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-23" value="如何保证控制块只被创建一次" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="400" y="2520" width="120" height="60" as="geometry" />
@@ -673,22 +686,37 @@
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-48" target="D_7xWSGTbG8qMXm1kdTH-52">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-109" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-48" target="D_7xWSGTbG8qMXm1kdTH-108">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-110" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-48" target="D_7xWSGTbG8qMXm1kdTH-107">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-117" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-48" target="D_7xWSGTbG8qMXm1kdTH-113">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-48" value="不要从裸指针创建shared_ptr" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="570" y="2425" width="120" height="60" as="geometry" />
+          <mxGeometry x="580" y="2120" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-90" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-50" target="D_7xWSGTbG8qMXm1kdTH-92">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="770" y="2250" as="targetPoint" />
+            <mxPoint x="770" y="2010" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-97" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-50" target="D_7xWSGTbG8qMXm1kdTH-95">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-102" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-50" target="D_7xWSGTbG8qMXm1kdTH-99">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-50" value="尽可能用make_shared创建shared_ptr" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="570" y="2350" width="120" height="60" as="geometry" />
+          <mxGeometry x="580" y="1880" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-52" value="make_shared不支持定制化deleter，使用new的结果作为创建shared_ptr的参数" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="790" y="2425" width="120" height="60" as="geometry" />
+          <mxGeometry x="800" y="2120" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-54" value="例外" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="710" y="2430" width="40" height="20" as="geometry" />
+          <mxGeometry x="720" y="2125" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-79" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-55" target="D_7xWSGTbG8qMXm1kdTH-77">
           <mxGeometry relative="1" as="geometry" />
@@ -769,13 +797,61 @@
           <mxGeometry x="-20" y="3410" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-91" value="原因" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="710" y="2350" width="40" height="20" as="geometry" />
+          <mxGeometry x="710" y="1880" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="D_7xWSGTbG8qMXm1kdTH-92" value="std::shared_ptr&amp;lt;Type&amp;gt; spw(new Type)有两步操作" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="827" y="2250" width="120" height="60" as="geometry" />
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-94" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-92" target="D_7xWSGTbG8qMXm1kdTH-93">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="D_7xWSGTbG8qMXm1kdTH-93" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1010" y="2170" width="120" height="60" as="geometry" />
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-92" value="异常安全" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="827" y="1890" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-104" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-93" target="D_7xWSGTbG8qMXm1kdTH-103">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-93" value="&lt;span style=&quot;&quot;&gt;std::shared_ptr&amp;lt;Type&amp;gt; spw(new Type)有两步操作&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="1890" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-98" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-95" target="D_7xWSGTbG8qMXm1kdTH-96">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-95" value="性能" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="827" y="1970" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-96" value="&lt;span style=&quot;&quot;&gt;make_shared只需要一次内存分配，否则需要两次(对象、控制块)&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="1970" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-101" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-99" target="D_7xWSGTbG8qMXm1kdTH-100">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-99" value="软件工程" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="827" y="1800" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-100" value="&lt;span style=&quot;&quot;&gt;make_shared 语句中只包含一次类型&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="1800" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-103" value="&lt;span style=&quot;&quot;&gt;编译器将该语句中别的指令插入new和shared_ptr的构造函数之间会导致异常时的内存泄漏&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1181" y="1890" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-106" value="我觉得是语言设计没有完善，查一下c++14之后是否支持" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="940" y="2110" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-107" value="重载了new和delete的类" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="800" y="2290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-108" value="initialize_list作为构造函数参数" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="800" y="2210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-115" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-113" target="D_7xWSGTbG8qMXm1kdTH-114">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-113" value="本身很大的类，有weak_ptr指向它, weak_ptr比shared_ptr晚析构" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="800" y="2380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-114" value="析构最后一个shared_ptr时因为控制块还在使用没法析构对象和控制块" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="2380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-116" value="原因" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="940" y="2385" width="40" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
