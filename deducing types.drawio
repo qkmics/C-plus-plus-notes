@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-22T13:49:02.981Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53" etag="m0AbEUzo7ObbXf_DkxMJ" version="18.1.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-22T14:04:00.482Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53" etag="cB6O2agsX5k5g7UNmOhD" version="18.1.1" type="github">
   <diagram id="OPUGuVJKlIoPCt-xv4Op" name="c++">
     <mxGraphModel dx="2891" dy="1832" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -956,11 +956,38 @@
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-169" value="导致" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="400" y="1710" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="D_7xWSGTbG8qMXm1kdTH-170" value="vector" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-170" value="vector和string" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-880" y="3660" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-171" value="用reserve预留足够的空间避免重新分配内存" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-690" y="3590" width="120" height="60" as="geometry" />
+          <mxGeometry x="-340" y="3660" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-178" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-172" target="D_7xWSGTbG8qMXm1kdTH-173">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-179" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-172" target="D_7xWSGTbG8qMXm1kdTH-174">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-181" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-172" target="D_7xWSGTbG8qMXm1kdTH-176">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-182" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="D_7xWSGTbG8qMXm1kdTH-172" target="D_7xWSGTbG8qMXm1kdTH-177">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-172" value="空间不够的行为" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-700" y="3660" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-173" value="1.请求一块足够大小的内存（一般为当前大小的两倍）" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-537.5" y="3660" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-174" value="2.将容器中的元素从旧内存拷贝到新内存中" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-537.5" y="3750" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-176" value="3.销毁旧内存中的元素" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-537.5" y="3840" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D_7xWSGTbG8qMXm1kdTH-177" value="4.释放旧内存" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-537.5" y="3940" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
