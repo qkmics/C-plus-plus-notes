@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-23T16:54:29.596Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53" etag="K3JbZYs-ISRPizSSbVxl" version="18.1.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-24T16:46:57.146Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53" etag="SDNCOR1yhwgqZOknWPkQ" version="18.1.1" type="github">
   <diagram id="OPUGuVJKlIoPCt-xv4Op" name="c++">
     <mxGraphModel dx="3076" dy="1931" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1052,8 +1052,23 @@
         <mxCell id="D_7xWSGTbG8qMXm1kdTH-206" value="包括" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-660" y="4380" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="PmHW8te7SL8ZdWCHwrjK-1" value="将C++对象保存到共享内存上&#xa;     将C++对象保存到共享内存上时，由于程序DWON掉或者其他原因停掉程序（不清除共享内存）重新拉起程序时，共享内存上C++对象的虚函数指针已经失效。为了使得不清除共享内存重启程序时C++对象仍然有效，需要恢复共享内存上C++对象的虚函数表，通过C++的placement new可以做到。&#xa;&#xa;     假设 void *pShmDataAddr是挂载后的共享内存地址，TData是存放的C++对象，共享内存上总共存放了MAX_OBJ_NUM个对象。具体做法如下。&#xa;&#xa;当程序启动的时候执行操作：&#xa;&#xa;    TData *pShmDataAddr = (TData *)pShmDataAddr;&#xa;&#xa;    for (int i=0; i&lt;MAX_OBJ_NUM; ++i)&#xa;&#xa;    {&#xa;&#xa;          TData *pData = new(&amp;pShmDataAddr[i])TData();&#xa;&#xa;          if (INIT_MODE ==  mode)&#xa;&#xa;         {&#xa;&#xa;              // 初次创建共享内存&#xa;&#xa;              pData-&gt;Init();&#xa;&#xa;         }&#xa;&#xa;         else if (RESUME_MODE == mode)&#xa;&#xa;          {&#xa;&#xa;               // 未清共享内存拉起程序&#xa;&#xa;               pData-&gt;Resume();&#xa;&#xa;           }&#xa;&#xa;     }&#xa;&#xa;      在这种方式下，注意TData构造函数不应该进行对象创建时的初始化操作(因为恢复共享内存中C++对象时也会调用TData构造函数)，而应该将初始化操作放在成员函数Init中。未清共享内存拉起程序时的指针变量等的恢复则放在成员函数Resume中。" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="PmHW8te7SL8ZdWCHwrjK-1" value="将C++对象保存到共享内存上 &#xa;     将C++对象保存到共享内存上时，由于程序DWON掉或者其他原因停掉程序（不清除共享内存）重新拉起程序时，共享内存上C++对象的虚函数指针已经失效。为了使得不清除共享内存重启程序时C++对象仍然有效，需要恢复共享内存上C++对象的虚函数表，通过C++的placement new可以做到。 &#xa; &#xa;     假设 void *pShmDataAddr是挂载后的共享内存地址，TData是存放的C++对象，共享内存上总共存放了MAX_OBJ_NUM个对象。具体做法如下。 &#xa; &#xa;当程序启动的时候执行操作： &#xa; &#xa;    TData *pShmDataAddr = (TData *)pShmDataAddr; &#xa; &#xa;    for (int i=0; i&lt;MAX_OBJ_NUM; ++i) &#xa; &#xa;    { &#xa; &#xa;          TData *pData = new(&amp;pShmDataAddr[i])TData(); &#xa; &#xa;          if (INIT_MODE ==  mode) &#xa; &#xa;         { &#xa; &#xa;              // 初次创建共享内存 &#xa; &#xa;              pData-&gt;Init(); &#xa; &#xa;         } &#xa; &#xa;         else if (RESUME_MODE == mode) &#xa; &#xa;          { &#xa; &#xa;               // 未清共享内存拉起程序 &#xa; &#xa;               pData-&gt;Resume(); &#xa; &#xa;           } &#xa; &#xa;     } &#xa; &#xa;      在这种方式下，注意TData构造函数不应该进行对象创建时的初始化操作(因为恢复共享内存中C++对象时也会调用TData构造函数)，而应该将初始化操作放在成员函数Init中。未清共享内存拉起程序时的指针变量等的恢复则放在成员函数Resume中。" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-1515" y="-1010" width="550" height="460" as="geometry" />
+        </mxCell>
+        <mxCell id="MMvop-AYKnKVGkL3AX73-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="MMvop-AYKnKVGkL3AX73-4" target="MMvop-AYKnKVGkL3AX73-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MMvop-AYKnKVGkL3AX73-4" value="&lt;span style=&quot;text-align: left;&quot;&gt;SFINAE&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1440" y="4540" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="MMvop-AYKnKVGkL3AX73-5" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;span style=&quot;font-family: arial, sans-serif; text-align: left; background-color: rgb(255, 255, 255);&quot;&gt;Substitution failure is not an&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-family: arial, sans-serif; text-align: left; background-color: rgb(255, 255, 255);&quot;&gt;error&lt;/span&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1200" y="4540" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="MMvop-AYKnKVGkL3AX73-10" value="含义" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-1290" y="4540" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="MMvop-AYKnKVGkL3AX73-11" value="&lt;span style=&quot;text-align: left;&quot;&gt;concept(c++20引入)&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1430" y="4720" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
