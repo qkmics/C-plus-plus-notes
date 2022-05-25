@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-05-24T17:17:47.879Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53" etag="zCPQZgMlavanwn29fJIn" version="18.1.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-25T16:39:30.499Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53" etag="-4ZHgFPNf9BwBS3KDdWo" version="18.1.2" type="github">
   <diagram id="OPUGuVJKlIoPCt-xv4Op" name="c++">
-    <mxGraphModel dx="3076" dy="1931" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3327" dy="4403" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1055,20 +1055,125 @@
         <mxCell id="PmHW8te7SL8ZdWCHwrjK-1" value="将C++对象保存到共享内存上 &#xa;     将C++对象保存到共享内存上时，由于程序DWON掉或者其他原因停掉程序（不清除共享内存）重新拉起程序时，共享内存上C++对象的虚函数指针已经失效。为了使得不清除共享内存重启程序时C++对象仍然有效，需要恢复共享内存上C++对象的虚函数表，通过C++的placement new可以做到。 &#xa; &#xa;     假设 void *pShmDataAddr是挂载后的共享内存地址，TData是存放的C++对象，共享内存上总共存放了MAX_OBJ_NUM个对象。具体做法如下。 &#xa; &#xa;当程序启动的时候执行操作： &#xa; &#xa;    TData *pShmDataAddr = (TData *)pShmDataAddr; &#xa; &#xa;    for (int i=0; i&lt;MAX_OBJ_NUM; ++i) &#xa; &#xa;    { &#xa; &#xa;          TData *pData = new(&amp;pShmDataAddr[i])TData(); &#xa; &#xa;          if (INIT_MODE ==  mode) &#xa; &#xa;         { &#xa; &#xa;              // 初次创建共享内存 &#xa; &#xa;              pData-&gt;Init(); &#xa; &#xa;         } &#xa; &#xa;         else if (RESUME_MODE == mode) &#xa; &#xa;          { &#xa; &#xa;               // 未清共享内存拉起程序 &#xa; &#xa;               pData-&gt;Resume(); &#xa; &#xa;           } &#xa; &#xa;     } &#xa; &#xa;      在这种方式下，注意TData构造函数不应该进行对象创建时的初始化操作(因为恢复共享内存中C++对象时也会调用TData构造函数)，而应该将初始化操作放在成员函数Init中。未清共享内存拉起程序时的指针变量等的恢复则放在成员函数Resume中。" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-1515" y="-1010" width="550" height="460" as="geometry" />
         </mxCell>
-        <mxCell id="MMvop-AYKnKVGkL3AX73-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="MMvop-AYKnKVGkL3AX73-4" target="MMvop-AYKnKVGkL3AX73-5">
+        <mxCell id="MMvop-AYKnKVGkL3AX73-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="MMvop-AYKnKVGkL3AX73-4" target="MMvop-AYKnKVGkL3AX73-5" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="MMvop-AYKnKVGkL3AX73-4" value="&lt;span style=&quot;text-align: left;&quot;&gt;SFINAE&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="MMvop-AYKnKVGkL3AX73-4" value="&lt;span style=&quot;text-align: left;&quot;&gt;SFINAE&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-1440" y="4540" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="MMvop-AYKnKVGkL3AX73-5" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;span style=&quot;font-family: arial, sans-serif; text-align: left; background-color: rgb(255, 255, 255);&quot;&gt;Substitution failure is not an&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-family: arial, sans-serif; text-align: left; background-color: rgb(255, 255, 255);&quot;&gt;error&lt;/span&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="MMvop-AYKnKVGkL3AX73-5" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;span style=&quot;font-family: arial, sans-serif; text-align: left; background-color: rgb(255, 255, 255);&quot;&gt;Substitution failure is not an&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-family: arial, sans-serif; text-align: left; background-color: rgb(255, 255, 255);&quot;&gt;error&lt;/span&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-1200" y="4540" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="MMvop-AYKnKVGkL3AX73-10" value="含义" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="MMvop-AYKnKVGkL3AX73-10" value="含义" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-1290" y="4540" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="MMvop-AYKnKVGkL3AX73-11" value="&lt;span style=&quot;text-align: left;&quot;&gt;concept(c++20引入)&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="MMvop-AYKnKVGkL3AX73-11" value="&lt;span style=&quot;text-align: left;&quot;&gt;concept(c++20引入)&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-1430" y="4720" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="HuaG6RTw0VzQy4qyLWnV-1" target="HuaG6RTw0VzQy4qyLWnV-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-1" value="虚函数表" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1390" y="-1660" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="HuaG6RTw0VzQy4qyLWnV-2" target="HuaG6RTw0VzQy4qyLWnV-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="HuaG6RTw0VzQy4qyLWnV-2" target="HuaG6RTw0VzQy4qyLWnV-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-2" value="c++对象模型" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1620" y="-1660" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-4" value="运行时多态的解决方案" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1170" y="-1753" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-6" value="// 虚函数基础问题&#xa;&#xa;// 多重继承时，A-》B-》C&#xa;// B重写了A的虚函数，C没有重写&#xa;// A* = new C()，调用该函数时，是调用A的还是B的实现？&#xa;// 调用的是B的实现，是C在DAG中从下往上找的第一个实现&#xa;class A &#xa;{&#xa;    int inta;&#xa;    public:&#xa;        virtual void func()&#xa;        {&#xa;            cout&lt;&lt; &quot;funcA&quot; &lt;&lt; endl;&#xa;        }&#xa;};&#xa;&#xa;class B : public A&#xa;{&#xa;    public:&#xa;        virtual void func()&#xa;        {&#xa;            cout&lt;&lt; &quot;funcB&quot; &lt;&lt; endl;&#xa;        }&#xa;};&#xa;&#xa;&#xa;class C : public B&#xa;{&#xa;    public:&#xa;        void funcaaa()&#xa;        {&#xa;            cout&lt;&lt; &quot;funcC&quot; &lt;&lt; endl;;&#xa;        }&#xa;};&#xa;&#xa;void func()&#xa;{&#xa;    A* pa = new C();&#xa;    B* pb = new C();&#xa;    pb-&gt;func();&#xa;    pb-&gt;func();&#xa;}" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1550" y="-2410" width="340" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-8" value="&amp;nbsp;输出：&lt;br&gt;&lt;span style=&quot;text-align: left;&quot;&gt;funcB&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: left;&quot;&gt;funcB&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-1560" y="-1778" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-9" value="虚函数指针" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1390" y="-1540" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="HuaG6RTw0VzQy4qyLWnV-11" target="HuaG6RTw0VzQy4qyLWnV-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-11" value="A" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1100" y="-1590" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="HuaG6RTw0VzQy4qyLWnV-12" target="HuaG6RTw0VzQy4qyLWnV-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-12" value="B" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1100" y="-1470" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.026;entryY=-0.12;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="HuaG6RTw0VzQy4qyLWnV-13" target="HuaG6RTw0VzQy4qyLWnV-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-13" value="C" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1100" y="-1350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-18" value="C" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="-850" y="-1350" width="140" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-19" value="vptr" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="HuaG6RTw0VzQy4qyLWnV-18">
+          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-20" value="A部分" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="HuaG6RTw0VzQy4qyLWnV-18">
+          <mxGeometry y="60" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-21" value="B部分" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="HuaG6RTw0VzQy4qyLWnV-18">
+          <mxGeometry y="90" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-22" value="C部分" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="HuaG6RTw0VzQy4qyLWnV-18">
+          <mxGeometry y="120" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-24" value="内存结构" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-950" y="-1350" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="HuaG6RTw0VzQy4qyLWnV-26" target="HuaG6RTw0VzQy4qyLWnV-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-26" value="A" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-743" y="-1790" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="HuaG6RTw0VzQy4qyLWnV-28" target="HuaG6RTw0VzQy4qyLWnV-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-28" value="B" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-743" y="-1670" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.026;entryY=-0.12;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="HuaG6RTw0VzQy4qyLWnV-30" target="HuaG6RTw0VzQy4qyLWnV-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-30" value="C" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-743" y="-1550" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-31" value="C" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="-493" y="-1550" width="140" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-32" value="vptr" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="HuaG6RTw0VzQy4qyLWnV-31">
+          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-33" value="A部分" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="HuaG6RTw0VzQy4qyLWnV-31">
+          <mxGeometry y="60" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-34" value="B部分" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="HuaG6RTw0VzQy4qyLWnV-31">
+          <mxGeometry y="90" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-35" value="C部分" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="HuaG6RTw0VzQy4qyLWnV-31">
+          <mxGeometry y="120" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-36" value="内存结构" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-593" y="-1550" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-37" value="class A &#xa;{&#xa;    public:&#xa;        virtual void func()&#xa;        {&#xa;            cout&lt;&lt; &quot;funcA&quot; &lt;&lt; endl;&#xa;        }&#xa;};&#xa;&#xa;class B  &#xa;{&#xa;    public:&#xa;        virtual void func()&#xa;        {&#xa;            cout&lt;&lt; &quot;funcB&quot; &lt;&lt; endl;&#xa;        }&#xa;};&#xa;&#xa;&#xa;class C : public A  , public B&#xa;{&#xa;    public:&#xa;        virtual void func()&#xa;        {&#xa;            cout&lt;&lt; &quot;funcC&quot; &lt;&lt; endl;&#xa;        }&#xa;};&#xa;&#xa;void func()&#xa;{&#xa;    A* pa = new C();&#xa;    B* pb = new C();&#xa;    pa-&gt;func();&#xa;    pb-&gt;func();&#xa;    cout &lt;&lt; sizeof(C) &lt;&lt; endl;&#xa;}" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1150" y="-2420" width="170" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="HuaG6RTw0VzQy4qyLWnV-38" value="输出：&lt;br&gt;funcC&lt;br&gt;funcC&lt;br&gt;16" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1150" y="-1870" width="60" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
