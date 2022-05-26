@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-26T16:20:24.424Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53" etag="E1cgrCAYBIeX4h8iIKzW" version="18.1.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-26T16:38:45.285Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53" etag="Sjk0KpccUhgrGAHN7KYE" version="18.1.2" type="github">
   <diagram id="OPUGuVJKlIoPCt-xv4Op" name="c++">
     <mxGraphModel dx="3076" dy="4269" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1318,13 +1318,13 @@
         <mxCell id="LAnm1PxYTj3idaCSTU7L-40" value="捕获规则" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-910.5" y="5220" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="LAnm1PxYTj3idaCSTU7L-42" value="lambda表达式所处作用域可见的non-static局部变量（包括函数参数）" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="LAnm1PxYTj3idaCSTU7L-42" value="lambda表达式所处作用域可见的non-static局部变量（包括函数参数）" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="-510" y="5220" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="LAnm1PxYTj3idaCSTU7L-44" value="可以capture的变量种类" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="-655" y="5220" width="140" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="LAnm1PxYTj3idaCSTU7L-45" value="全局变量、static变量" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="LAnm1PxYTj3idaCSTU7L-45" value="全局变量、static变量" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="-513" y="5320" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="LAnm1PxYTj3idaCSTU7L-47" value="无法capture的变量种类" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
@@ -1335,6 +1335,9 @@
         </mxCell>
         <mxCell id="LAnm1PxYTj3idaCSTU7L-53" value="注：this指针是所有成员函数的隐藏参数，所以也可以被捕获" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-257" y="5070" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LAnm1PxYTj3idaCSTU7L-55" value="&lt;span style=&quot;&quot;&gt;重点！&lt;/span&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-520" y="5390" width="120" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
