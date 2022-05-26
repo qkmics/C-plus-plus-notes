@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-26T16:14:23.673Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53" etag="BaP0sIyONVrwdeLpa12c" version="18.1.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-26T16:20:24.424Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53" etag="E1cgrCAYBIeX4h8iIKzW" version="18.1.2" type="github">
   <diagram id="OPUGuVJKlIoPCt-xv4Op" name="c++">
     <mxGraphModel dx="3076" dy="4269" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1286,13 +1286,13 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="LAnm1PxYTj3idaCSTU7L-27" value="可能导致垂悬引用（尤其是在捕获了&lt;br&gt;this指针的情况）" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-264.88" y="5090" width="120" height="60" as="geometry" />
+          <mxGeometry x="-257" y="5170" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="LAnm1PxYTj3idaCSTU7L-29" value="缺点" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="-370" y="4980" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="LAnm1PxYTj3idaCSTU7L-30" value="缺点" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="-367.5" y="5100" width="40" height="20" as="geometry" />
+          <mxGeometry x="-359.62" y="5180" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="LAnm1PxYTj3idaCSTU7L-31" value="避免使用default capture model" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="10" y="5030" width="120" height="60" as="geometry" />
@@ -1303,8 +1303,11 @@
         <mxCell id="LAnm1PxYTj3idaCSTU7L-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="LAnm1PxYTj3idaCSTU7L-35" target="LAnm1PxYTj3idaCSTU7L-31">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="LAnm1PxYTj3idaCSTU7L-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="LAnm1PxYTj3idaCSTU7L-35" target="LAnm1PxYTj3idaCSTU7L-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="LAnm1PxYTj3idaCSTU7L-35" value="可能导致误以为capture了某些变量" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-264.88" y="5180" width="120" height="60" as="geometry" />
+          <mxGeometry x="-257" y="5260" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="LAnm1PxYTj3idaCSTU7L-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="LAnm1PxYTj3idaCSTU7L-40" target="LAnm1PxYTj3idaCSTU7L-42">
           <mxGeometry relative="1" as="geometry" />
@@ -1326,6 +1329,12 @@
         </mxCell>
         <mxCell id="LAnm1PxYTj3idaCSTU7L-47" value="无法capture的变量种类" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="-647.5" y="5320" width="140" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="LAnm1PxYTj3idaCSTU7L-49" value="包括" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-310" y="5330" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="LAnm1PxYTj3idaCSTU7L-53" value="注：this指针是所有成员函数的隐藏参数，所以也可以被捕获" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-257" y="5070" width="120" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
