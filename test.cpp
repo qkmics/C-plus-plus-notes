@@ -65,15 +65,18 @@ struct Result {
     {
         constexpr static unsigned int value = getValue<index, values...>::getValueV;
     };
-    
-    // template<unsigned int index>
-    // constexpr static unsigned int value = getValueT<index>::value;
+};
+
+template <typename ...Ts>
+struct GetSizes{
+    using sizeType = Result<sizeof(Ts)...>;
 };
 
 void test() {
     std::cout << Result<1,2,3>::getValueT<0>::value <<  std::endl;
     std::cout << Result<1,2,3>::getValueT<1>::value <<  std::endl;
     std::cout << Result<1,2,3>::getValueT<2>::value <<  std::endl;
+    std::cout << Result<GetSizes<int,long long ,char>::sizeType::getValueT<1>::value>::getValueT<0>::value <<  std::endl;
 }
 
 
